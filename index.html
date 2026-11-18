@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="韩沁彤的个人作品集：北京航空航天大学新媒体艺术与设计专业，一个装满作业、动画和奇思妙想的私人储物柜。">
+  <meta name="theme-color" content="#ffffcd">
+  <title>韩沁彤 HAN QINTONG — 私人储物柜</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1113'/%3E%3Cpath d='M32 7l5.9 17.1L55 30l-17.1 5.9L32 53l-5.9-17.1L9 30l17.1-5.9Z' fill='%23e5ff63'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#lockerInterior">跳到柜内作品区</a>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="page-ambient" aria-hidden="true">
+    <span class="ambient-glow ambient-glow--blue"></span>
+    <span class="ambient-glow ambient-glow--pink"></span>
+    <span class="ambient-glow ambient-glow--lime"></span>
+    <span class="ambient-star ambient-star--one">✦</span>
+    <span class="ambient-star ambient-star--two">✧</span>
+    <span class="ambient-star ambient-star--three">✦</span>
+    <span class="ambient-ring ambient-ring--one"></span>
+    <span class="ambient-ring ambient-ring--two"></span>
+    <span class="halftone halftone--left"></span>
+    <span class="halftone halftone--right"></span>
+    <span class="wall-doodle wall-doodle--one">stay<br>curious</span>
+    <span class="wall-doodle wall-doodle--two">no<br>rules!</span>
+    <span class="wall-tape wall-tape--one"></span>
+    <span class="wall-tape wall-tape--two"></span>
+  </div>
+
+  <!-- Pale-yellow poster background: layered stars + hearts, never circles. -->
+  <div class="pop-decor" aria-hidden="true">
+    <svg class="pop-mega-star" viewBox="0 0 100 100">
+      <path d="M50 2 61 35 96 35 68 56 78 91 50 70 22 91 32 56 4 35 39 35Z" fill="#ff2d8e"/>
+      <path d="M50 2 61 35 96 35 68 56 78 91 50 70 22 91 32 56 4 35 39 35Z" fill="#1f2bd8" opacity=".9" transform="translate(50 50) scale(.56) translate(-50 -50)"/>
+      <path d="M50 2 61 35 96 35 68 56 78 91 50 70 22 91 32 56 4 35 39 35Z" fill="#e5ff63" opacity=".9" transform="translate(50 50) scale(.24) translate(-50 -50)"/>
+    </svg>
+    <svg class="pop-mega-heart" viewBox="0 0 100 100">
+      <path d="M50 89C19 68 5 48 5 30 5 15 16 6 30 6c8 0 15 5 20 12 5-7 12-12 20-12 14 0 25 9 25 24 0 18-14 38-45 59Z" fill="#1f2bd8"/>
+      <path d="M50 89C19 68 5 48 5 30 5 15 16 6 30 6c8 0 15 5 20 12 5-7 12-12 20-12 14 0 25 9 25 24 0 18-14 38-45 59Z" fill="#ff2d8e" opacity=".82" transform="translate(50 50) scale(.56) translate(-50 -50)"/>
+    </svg>
+    <span class="pop-star pop-star--one">★</span>
+    <span class="pop-star pop-star--two">✦</span>
+    <span class="pop-star pop-star--three">★</span>
+    <span class="pop-star pop-star--four">✦</span>
+    <span class="pop-heart pop-heart--one">♥</span>
+    <span class="pop-heart pop-heart--two">♥</span>
+    <span class="pop-heart pop-heart--three">♥</span>
+    <svg class="pop-wave pop-wave--left" viewBox="0 0 300 100" fill="none">
+      <path d="M4 70C38 8 74 96 112 48s70-38 108 4 58 14 72-4" stroke="currentColor" stroke-width="14" stroke-linecap="round"/>
+    </svg>
+    <svg class="pop-wave pop-wave--right" viewBox="0 0 300 100" fill="none">
+      <path d="M5 26c37 64 74-20 111 24s62 48 103 8 54-12 76 8" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
+    </svg>
+    <span class="pop-cross pop-cross--one"></span>
+    <span class="pop-cross pop-cross--two"></span>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="my story — 韩沁彤个人作品集首页">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span class="brand-copy">
+        <strong>my story</strong>
+        <small>韩沁彤 / HAN QINTONG</small>
+      </span>
+    </a>
+
+    <p class="topbar-meta">
+      <span class="live-dot" aria-hidden="true"></span>
+      BEIHANG UNIVERSITY · NEW MEDIA ART
+    </p>
+
+    <div class="topbar-actions">
+      <span class="issue-no">LOCKER 03 / 2026</span>
+      <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="true" aria-label="关闭声音">
+        <span class="sound-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="sound-toggle__text">SOUND</span>
+      </button>
+      <button class="small-button" type="button" data-modal="about">
+        关于我 <span aria-hidden="true">↗</span>
+      </button>
+    </div>
+  </header>
+
+  <!--
+    换成自己的资料：搜索 韩沁彤 / HAN QINTONG / 北京航空航天大学 /
+    新媒体艺术与设计专业 / 数字媒体艺术，替换即可。
+    个人名片在 .door-back 里，桌面打开后由 JS 移到柜门外侧展示。
+  -->
+  <main id="top">
+    <section class="hero" id="hero" aria-labelledby="pageTitle">
+      <h1 class="page-title" id="pageTitle">
+        <span class="sr-only">韩沁彤的个人作品集：打开私人储物柜</span>
+        <span class="page-title__ghost" aria-hidden="true">MY<br>LOCKER_</span>
+      </h1>
+
+      <aside class="side-copy side-copy--left" aria-label="作品集介绍">
+        <p class="micro-label"><span>01</span> PRIVATE LOCKER</p>
+        <p class="side-copy__cn">Creating<br>Virtual Worlds.</p>
+        <p class="side-copy__en">DIGITAL MEDIA &amp; AI EXPLORER<br>A LITTLE WORLD OF MY OWN.</p>
+        <span class="side-copy__scribble" aria-hidden="true">this is my corner →</span>
+      </aside>
+
+      <div class="locker-stage">
+        <div class="locker-rig" id="lockerRig">
+          <div class="floor-shadow" aria-hidden="true"></div>
+
+          <div class="locker-bank">
+            <!-- 普通柜 01：不可交互 -->
+            <div class="locker-unit locker-unit--plain locker-unit--one" role="button" tabindex="0" aria-label="01 号柜暂未解锁" title="暂未解锁">
+              <div class="plain-locker">
+                <span class="plain-locker__top"><b>01</b><small>ARCHIVE</small></span>
+                <span class="plain-locker__vent plain-locker__vent--top"><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="plain-locker__seam"></span>
+                <span class="plain-locker__handle" aria-hidden="true"></span>
+                <span class="plain-locker__lock"><i></i></span>
+                <span class="plain-locker__plate">LOCKED</span>
+                <span class="star-sticker star-sticker--plain-one" aria-hidden="true"></span>
+                <span class="tape-strip tape-strip--plain-one" aria-hidden="true"></span>
+                <span class="plain-locker__vent plain-locker__vent--bottom"><i></i><i></i><i></i><i></i></span>
+                <span class="plain-locker__foot">NO. 01 / STORAGE</span>
+              </div>
+            </div>
+
+            <!-- 普通柜 02：不可交互 -->
+            <div class="locker-unit locker-unit--plain locker-unit--two" role="button" tabindex="0" aria-label="02 号柜暂未解锁" title="暂未解锁">
+              <div class="plain-locker">
+                <span class="plain-locker__top"><b>02</b><small>STUDIO</small></span>
+                <span class="plain-locker__vent plain-locker__vent--top"><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="plain-locker__seam"></span>
+                <span class="plain-locker__handle" aria-hidden="true"></span>
+                <span class="plain-locker__lock"><i></i></span>
+                <span class="plain-locker__plate">LOCKED</span>
+                <span class="heart-sticker heart-sticker--plain-two" aria-hidden="true">♥</span>
+                <span class="bubble-sticker bubble-sticker--plain-two" aria-hidden="true">♡</span>
+                <span class="tape-strip tape-strip--plain-two" aria-hidden="true"></span>
+                <span class="plain-locker__vent plain-locker__vent--bottom"><i></i><i></i><i></i><i></i></span>
+                <span class="plain-locker__foot">NO. 02 / STORAGE</span>
+              </div>
+            </div>
+
+            <!-- 第三个柜 03：唯一可交互的主柜 -->
+            <div class="locker locker--active" id="locker">
+              <div class="locker-crown" aria-hidden="true">
+                <span class="crown-vent"></span>
+                <span class="crown-plate">HAN QINTONG · 03</span>
+                <span class="crown-vent"></span>
+              </div>
+
+              <div class="locker-shell">
+                <div class="interior" id="lockerInterior" aria-hidden="true" inert>
+                  <div class="interior-topline">
+                    <span><i aria-hidden="true"></i> INSIDE / 韩沁彤的私人宇宙</span>
+                    <span class="interior-id">NO. 03 · BEIHANG</span>
+                  </div>
+
+                  <div class="interior-glow" aria-hidden="true"></div>
+                  <div class="interior-wallpaper" aria-hidden="true"></div>
+
+                  <div class="shelf-decor" aria-hidden="true">
+                    <span class="book book--one"><i>ANIME</i></span>
+                    <span class="book book--two"><i>TYPE</i></span>
+                    <span class="book book--three"><i>PLAY</i></span>
+                    <span class="book book--four"><i>DREAM</i></span>
+                    <span class="decor-camera"><i></i></span>
+                    <span class="shelf-board"></span>
+                    <span class="tape-strip tape-strip--shelf"></span>
+                  </div>
+
+                  <div class="work-area" aria-label="错落堆叠的作品文件夹">
+                    <button class="work-file work-file--code" type="button" data-modal="code" aria-haspopup="dialog">
+                      <span class="work-tab">课堂作业 · FILE A</span>
+                      <span class="work-tape" aria-hidden="true"></span>
+                      <span class="work-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" fill="none">
+                          <rect x="4" y="7" width="40" height="31" rx="3" stroke="currentColor" stroke-width="2.2"/>
+                          <path d="M4 14h40" stroke="currentColor" stroke-width="2.2"/>
+                          <circle cx="9" cy="10.5" r="1.2" fill="currentColor"/>
+                          <circle cx="13" cy="10.5" r="1.2" fill="currentColor"/>
+                          <path d="m19 21-5 5 5 5M29 21l5 5-5 5M26 19l-4 14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span class="work-kicker">P5.JS · SOUND · GENERATIVE</span>
+                      <span class="work-title">
+                        <small>课堂作业 / COURSEWORK</small>
+                        <strong>互动编程</strong>
+                        <em>INTERACTIVE CODING</em>
+                        <span class="work-open">打开文件 <span aria-hidden="true">↗</span></span>
+                      </span>
+                      <span class="work-stamp" aria-hidden="true">01</span>
+                    </button>
+
+                    <button class="work-file work-file--web" type="button" data-modal="web" aria-haspopup="dialog">
+                      <span class="work-tab">课堂作业 · FILE B</span>
+                      <span class="work-tape" aria-hidden="true"></span>
+                      <span class="work-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" fill="none">
+                          <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.2"/>
+                          <path d="M6 24h36M24 6c6 6 9 12 9 18s-3 12-9 18c-6-6-9-12-9-18s3-12 9-18Z" stroke="currentColor" stroke-width="2.2"/>
+                          <path d="M10 13h28M10 35h28" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 4"/>
+                        </svg>
+                      </span>
+                      <span class="work-kicker">WEB · STORY · MOTION</span>
+                      <span class="work-title">
+                        <small>课堂作业 / COURSEWORK</small>
+                        <strong>网络媒体设计</strong>
+                        <em>NET MEDIA DESIGN</em>
+                        <span class="work-open">打开文件 <span aria-hidden="true">↗</span></span>
+                      </span>
+                      <span class="work-stamp" aria-hidden="true">02</span>
+                    </button>
+
+                    <button class="work-file work-file--scene" type="button" data-modal="scene" aria-haspopup="dialog">
+                      <span class="work-tab">课外拓展 · FILE C</span>
+                      <span class="work-tape" aria-hidden="true"></span>
+                      <span class="work-halo" aria-hidden="true"></span>
+                      <span class="work-icon work-icon--scene" aria-hidden="true">
+                        <svg viewBox="0 0 140 105" fill="none">
+                          <circle cx="70" cy="53" r="42" stroke="currentColor" stroke-width="1" stroke-dasharray="3 6" opacity=".7"/>
+                          <path d="M24 62h92" stroke="currentColor" stroke-width="1.5" opacity=".55"/>
+                          <path d="M41 59h58l-8-10H49l-8 10Z" fill="#ff7a5c" stroke="currentColor" stroke-width="1.5"/>
+                          <path d="M36 49h68l-12-10H48L36 49Z" fill="#f4e7cc" stroke="currentColor" stroke-width="1.5"/>
+                          <path d="M53 49v18M87 49v18M62 49v14M78 49v14" stroke="currentColor" stroke-width="2"/>
+                          <path d="M17 72c15-5 25 2 38-3 12-4 19-1 30 1 11 2 24-2 38 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                          <path d="m108 24 2.6 7.4L118 34l-7.4 2.6L108 44l-2.6-7.4L98 34l7.4-2.6L108 24Z" fill="currentColor"/>
+                          <circle cx="37" cy="29" r="2.6" fill="currentColor"/>
+                        </svg>
+                      </span>
+                      <span class="work-kicker">GLOW · MEMORY · LITTLE WORLD</span>
+                      <span class="work-title">
+                        <small>课外拓展 / SIDE QUEST</small>
+                        <strong>一隅天地</strong>
+                        <em>古风交互微缩场景</em>
+                        <span class="work-open">进入场景 <span aria-hidden="true">↗</span></span>
+                      </span>
+                      <span class="work-stamp" aria-hidden="true">03</span>
+                    </button>
+
+                    <button class="work-file work-file--blender" type="button" data-modal="blender" aria-haspopup="dialog">
+                      <span class="work-tab">课外拓展 · FILE D</span>
+                      <span class="work-tape" aria-hidden="true"></span>
+                      <span class="work-icon work-icon--cube" aria-hidden="true">
+                        <svg viewBox="0 0 140 110" fill="none">
+                          <path d="m70 16 44 24v38L70 102 26 78V40l44-24Z" stroke="currentColor" stroke-width="1.7"/>
+                          <path d="m70 16 44 24-44 24-44-24 44-24Z" stroke="currentColor" stroke-width="1.7"/>
+                          <path d="M70 64v38M59 22l44 24M37 34l44 24" stroke="currentColor" stroke-width="1" stroke-dasharray="3 4" opacity=".8"/>
+                          <path d="m33 23 8-4M37 92l12 6M111 49l4 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                          <circle cx="70" cy="64" r="3" fill="currentColor"/>
+                        </svg>
+                      </span>
+                      <span class="work-kicker">UE5 · BLENDER · 3D PLAY</span>
+                      <span class="work-title">
+                        <small>课外拓展 / SIDE QUEST</small>
+                        <strong>UE / Blender 建模</strong>
+                        <em>3D 练习存档 · 场景搭建</em>
+                        <span class="work-open">打开存档 <span aria-hidden="true">↗</span></span>
+                      </span>
+                      <span class="work-stamp" aria-hidden="true">04</span>
+                    </button>
+                  </div>
+
+                  <div class="object-shelf" aria-hidden="true">
+                    <span class="object-board"></span>
+                    <span class="shelf-note">take<br>a break.</span>
+                    <span class="succulent">
+                      <i class="succulent-pot"></i>
+                      <i class="succulent-leaf succulent-leaf--1"></i>
+                      <i class="succulent-leaf succulent-leaf--2"></i>
+                      <i class="succulent-leaf succulent-leaf--3"></i>
+                      <i class="succulent-leaf succulent-leaf--4"></i>
+                      <i class="succulent-leaf succulent-leaf--5"></i>
+                    </span>
+                    <span class="mug">
+                      <i class="mug-handle"></i>
+                      <i class="mug-rim"></i>
+                      <b>H</b>
+                    </span>
+                  </div>
+
+                  <span class="teddy-hang" aria-hidden="true">
+                    <span class="teddy-hook"></span>
+                    <span class="teddy-string"></span>
+                    <span class="teddy-emoji">🧸</span>
+                  </span>
+
+                  <div class="interior-foot" aria-hidden="true">
+                    <span>OPEN FOR COLLAB / 2026</span>
+                    <span class="interior-foot__barcode"></span>
+                    <span>BEIJING · 39.9°N</span>
+                  </div>
+
+                  <span class="interior-sticker interior-sticker--one" aria-hidden="true">✦</span>
+                  <span class="interior-sticker interior-sticker--two" aria-hidden="true">加油!</span>
+                  <span class="star-sticker star-sticker--inside" aria-hidden="true"></span>
+                  <span class="heart-sticker heart-sticker--inside" aria-hidden="true">♥</span>
+                  <span class="bubble-sticker bubble-sticker--inside" aria-hidden="true">♡</span>
+                  <span class="tape-strip tape-strip--inside" aria-hidden="true"></span>
+                </div>
+
+                <div class="door" id="door">
+                  <button class="door-front" id="openLocker" type="button" aria-label="打开 03 号柜门，查看韩沁彤的作品" aria-expanded="false" aria-controls="lockerInterior">
+                    <span class="door-grain" aria-hidden="true"></span>
+                    <span class="door-inset" aria-hidden="true"></span>
+                    <span class="tape-strip tape-strip--door" aria-hidden="true"></span>
+
+                    <span class="door-serial" aria-hidden="true">
+                      <small>PRIVATE PROPERTY</small>
+                      <b>LOCKER NO. 03</b>
+                    </span>
+
+                    <span class="door-vents door-vents--top" aria-hidden="true">
+                      <i></i><i></i><i></i><i></i><i></i>
+                    </span>
+
+                    <span class="door-nameplate" aria-hidden="true">
+                      <small>HAN QINTONG</small>
+                      <strong>韩沁彤</strong>
+                      <em>KEEP YOUR DREAMS CLOSE.</em>
+                    </span>
+
+                    <span class="door-polaroid door-polaroid--one" aria-hidden="true">
+                      <span class="door-photo door-photo--sunset"><i></i></span>
+                      <span class="door-photo-caption">05.21 / after school</span>
+                    </span>
+
+                    <span class="door-polaroid door-polaroid--two" aria-hidden="true">
+                      <span class="door-photo door-photo--sea"><i></i><b></b></span>
+                      <span class="door-photo-caption">summer, someday</span>
+                    </span>
+
+                    <span class="door-polaroid door-polaroid--three" aria-hidden="true">
+                      <span class="door-photo door-photo--night"><i></i><b></b></span>
+                      <span class="door-photo-caption">03:17 a.m.</span>
+                    </span>
+
+                    <span class="door-sticker door-sticker--star" aria-hidden="true"><i></i></span>
+                    <span class="door-sticker door-sticker--heart" aria-hidden="true"><i></i></span>
+                    <span class="door-sticker door-sticker--round" aria-hidden="true">HQT</span>
+                    <span class="door-sticker door-sticker--flower" aria-hidden="true">✿</span>
+                    <span class="door-sticker door-sticker--smile" aria-hidden="true"><i></i></span>
+                    <span class="door-squiggle" aria-hidden="true">
+                      <svg viewBox="0 0 120 40" fill="none">
+                        <path d="M4 28c11-25 18 10 31-7 12-16 19 12 32-4 10-13 18 8 28-4 7-8 11 5 18-3" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+                      </svg>
+                    </span>
+                    <span class="door-bolt" aria-hidden="true"></span>
+                    <span class="door-emoji door-emoji--headphones" aria-hidden="true">🎧</span>
+                    <span class="door-emoji door-emoji--strawberry" aria-hidden="true">🍓</span>
+
+                    <span class="door-note" aria-hidden="true">
+                      <small>DIGITAL MEDIA &amp; AI EXPLORER</small>
+                      CREATING<br>VIRTUAL WORLDS.
+                    </span>
+
+                    <span class="door-manga" aria-hidden="true">
+                      <b>art and design</b>
+                      <small>ART / DESIGN / PLAY</small>
+                    </span>
+
+                    <span class="door-doodle" aria-hidden="true">stay<br>curious!</span>
+
+                    <span class="door-charm" aria-hidden="true">
+                      <span class="charm-string"></span>
+                      <span class="charm-doll">
+                        <svg viewBox="0 0 70 96" fill="none" role="presentation">
+                          <circle cx="35" cy="31" r="27" fill="#1b1c22"/>
+                          <path d="M13 29c1-17 9-27 22-27s21 10 22 28c-6 0-12-4-15-10-3 7-10 11-18 12-4 0-8-1-11-3Z" fill="#22232b"/>
+                          <ellipse cx="35" cy="37" rx="16" ry="17" fill="#f1ccb7"/>
+                          <path d="M22 33c2-11 7-16 13-16s11 5 13 17c-4-1-7-4-8-8-3 4-8 6-14 7h-4Z" fill="#22232b"/>
+                          <circle cx="28" cy="37" r="5.5" stroke="#14161b" stroke-width="1.7"/>
+                          <circle cx="42" cy="37" r="5.5" stroke="#14161b" stroke-width="1.7"/>
+                          <path d="M33.5 37h3" stroke="#14161b" stroke-width="1.5"/>
+                          <circle cx="28" cy="37" r="1.2" fill="#14161b"/>
+                          <circle cx="42" cy="37" r="1.2" fill="#14161b"/>
+                          <path d="M31 46c2 2 6 2 8 0" stroke="#a64d4f" stroke-width="1.4" stroke-linecap="round"/>
+                          <path d="M18 81c1-13 8-19 17-19s16 6 17 19v15H18V81Z" fill="#274d69"/>
+                          <path d="M27 62h16v9H27z" fill="#f1ccb7"/>
+                          <path d="M35 71v25" stroke="#f4d167" stroke-width="2"/>
+                          <path d="m35 82-3-3M35 82l3-3" stroke="#f4d167" stroke-width="1.2"/>
+                        </svg>
+                      </span>
+                      <span class="charm-star">✦</span>
+                    </span>
+
+                    <span class="lock-wrap" aria-hidden="true">
+                      <span class="lock-glow"></span>
+                      <span class="lock-bracket"></span>
+                      <span class="lock-body">
+                        <span class="lock-dial"></span>
+                        <span class="lock-keyhole"></span>
+                      </span>
+                      <span class="lock-prompt"><b>点击开锁</b><small>CLICK TO OPEN</small></span>
+                    </span>
+
+                    <span class="door-footer" aria-hidden="true">
+                      <span class="door-barcode"></span>
+                      <small>PROPERTY OF HQT / HANDLE WITH CARE</small>
+                      <span class="door-plus">+</span>
+                    </span>
+
+                    <span class="door-vents door-vents--bottom" aria-hidden="true">
+                      <i></i><i></i><i></i><i></i>
+                    </span>
+
+                    <span class="door-sheen" aria-hidden="true"></span>
+                    <span class="sr-only">打开韩沁彤的储物柜</span>
+                  </button>
+
+                  <div class="door-back" aria-hidden="true">
+                    <span class="back-metal" aria-hidden="true"></span>
+                    <span class="back-note" aria-hidden="true">welcome in,<br>this is my little universe. <b>✦</b></span>
+                    <span class="back-graphic" aria-hidden="true">
+                      <small>INSIDE LOCKER NO. 03</small>
+                      <b>HELLO!</b>
+                      <i>TAKE A LOOK AROUND.</i>
+                    </span>
+                    <span class="back-sticker" aria-hidden="true">STAY<br>CURIOUS</span>
+                    <span class="back-tape" aria-hidden="true"></span>
+
+                    <div class="badge-rig" id="badgeRig">
+                      <span class="badge-strap" aria-hidden="true"></span>
+                      <span class="badge-clip" aria-hidden="true"></span>
+
+                      <article class="id-card">
+                        <div class="id-card__topline">
+                          <span>BEIHANG UNIVERSITY</span>
+                          <span>STUDENT ID · NO. 03</span>
+                        </div>
+
+                        <div class="id-card__main">
+                          <div class="id-portrait" aria-hidden="true">
+                            <svg viewBox="0 0 120 120" role="img" aria-label="韩沁彤的极简卡通头像">
+                              <rect width="120" height="120" rx="12" fill="#dbe8e4"/>
+                              <circle cx="97" cy="20" r="22" fill="#e5ff63"/>
+                              <path d="m98 7 2.4 7.1 7.6 1.7-6.2 4.7 1 7.7-6.3-4.4-6.4 4.2 1.2-7.6-6.2-5 7.6-1.4L98 7Z" fill="#15384c"/>
+                              <path d="M25 120c2-23 17-34 35-34s33 11 35 34H25Z" fill="#173c52"/>
+                              <path d="M46 82h28v19H46z" fill="#f1cdb8"/>
+                              <path d="M50 88 60 98l10-10 7 5-2 27H45l-2-27 7-5Z" fill="#eff0e8"/>
+                              <path d="M55 94 60 100l5-6" stroke="#b3b7b0" stroke-width="1.4" fill="none"/>
+                              <path d="M23 64c0-28 15-46 37-46 24 0 37 19 37 48v27c0 13-11 20-26 20H49c-15 0-26-7-26-20V64Z" fill="#1b1b22"/>
+                              <ellipse cx="60" cy="67" rx="25" ry="29" fill="#f1cdb8"/>
+                              <path d="M34 59c2-25 11-37 27-37 16 0 24 12 26 37-7-1-13-7-16-15-4 8-13 14-24 16-5 0-9 0-13-1Z" fill="#1b1b22"/>
+                              <path d="M60 23v22" stroke="#2b2931" stroke-width="1.4" opacity=".65"/>
+                              <rect x="40" y="56" width="17" height="14" rx="5" stroke="#11161a" stroke-width="2.2" fill="rgba(255,255,255,.06)"/>
+                              <rect x="63" y="56" width="17" height="14" rx="5" stroke="#11161a" stroke-width="2.2" fill="rgba(255,255,255,.06)"/>
+                              <path d="M57 63h6M40 61l-7-3M80 61l7-3" stroke="#11161a" stroke-width="2" stroke-linecap="round"/>
+                              <circle cx="48.5" cy="63" r="1.8" fill="#11161a"/>
+                              <circle cx="71.5" cy="63" r="1.8" fill="#11161a"/>
+                              <path d="M41 53c4-2 8-2 11 0M68 53c4-2 8-2 11 0" stroke="#11161a" stroke-width="1.6" stroke-linecap="round"/>
+                              <path d="M60 69v4l-2 2" stroke="#b97669" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+                              <path d="M54 80c3 3 9 3 12 0" stroke="#9f4c51" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+                              <ellipse cx="43" cy="76" rx="4.2" ry="2.2" fill="#ef9e9a" opacity=".65"/>
+                              <ellipse cx="77" cy="76" rx="4.2" ry="2.2" fill="#ef9e9a" opacity=".65"/>
+                              <path d="m86 70 1.7 4.3 4.3 1.7-4.3 1.7L86 82l-1.7-4.3L80 76l4.3-1.7L86 70Z" fill="#e5ff63" stroke="#152a34" stroke-width=".8"/>
+                            </svg>
+                            <span>HAN QINTONG</span>
+                          </div>
+
+                          <div class="id-name">
+                            <span class="id-hand">hello, i am</span>
+                            <h3>韩沁彤</h3>
+                            <p>HAN QINTONG</p>
+                          </div>
+                        </div>
+
+                        <dl class="id-facts">
+                          <div>
+                            <dt>姓名 / NAME</dt>
+                            <dd>韩沁彤 (Han Qintong)</dd>
+                          </div>
+                          <div>
+                            <dt>学校 / SCHOOL</dt>
+                            <dd>北京航空航天大学</dd>
+                          </div>
+                          <div>
+                            <dt>专业 / MAJOR</dt>
+                            <dd>新媒体艺术与设计专业</dd>
+                          </div>
+                          <div>
+                            <dt>目标方向 / GOAL</dt>
+                            <dd>数字媒体艺术</dd>
+                          </div>
+                        </dl>
+
+                        <p class="id-quote">“Creating virtual worlds, one little thing at a time.”</p>
+
+                        <div class="id-tags" aria-label="关键词">
+                          <span>ANIME</span>
+                          <span>INTERACTIVE</span>
+                          <span>DESIGN</span>
+                        </div>
+
+                        <div class="id-card__foot">
+                          <span class="id-barcode" aria-hidden="true"></span>
+                          <span class="id-sign">HQT.</span>
+                        </div>
+                        <span class="id-tape id-tape--left" aria-hidden="true"></span>
+                        <span class="id-tape id-tape--right" aria-hidden="true"></span>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <span class="door-hinge door-hinge--top" aria-hidden="true"></span>
+                <span class="door-hinge door-hinge--bottom" aria-hidden="true"></span>
+
+                <span class="shell-screw shell-screw--tl" aria-hidden="true"></span>
+                <span class="shell-screw shell-screw--tr" aria-hidden="true"></span>
+                <span class="shell-screw shell-screw--bl" aria-hidden="true"></span>
+                <span class="shell-screw shell-screw--br" aria-hidden="true"></span>
+              </div>
+
+              <div class="locker-base" aria-hidden="true">
+                <span></span>
+                <span>PROPERTY OF HAN QINTONG / DO NOT OPEN UNLESS YOU LIKE FUN</span>
+                <span></span>
+              </div>
+            </div>
+
+            <!-- 普通柜 04：不可交互 -->
+            <div class="locker-unit locker-unit--plain locker-unit--four" role="button" tabindex="0" aria-label="04 号柜暂未解锁" title="暂未解锁">
+              <div class="plain-locker">
+                <span class="plain-locker__top"><b>04</b><small>EXTRA</small></span>
+                <span class="plain-locker__vent plain-locker__vent--top"><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="plain-locker__seam"></span>
+                <span class="plain-locker__handle" aria-hidden="true"></span>
+                <span class="plain-locker__lock"><i></i></span>
+                <span class="plain-locker__plate">LOCKED</span>
+                <span class="star-sticker star-sticker--plain-four" aria-hidden="true"></span>
+                <span class="heart-sticker heart-sticker--plain-four" aria-hidden="true">♥</span>
+                <span class="tape-strip tape-strip--plain-four" aria-hidden="true"></span>
+                <span class="plain-locker__vent plain-locker__vent--bottom"><i></i><i></i><i></i><i></i></span>
+                <span class="plain-locker__foot">NO. 04 / PRIVATE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="side-copy side-copy--right" aria-label="操作提示">
+        <p class="micro-label"><span>02</span> HOW TO PEEK</p>
+        <ol class="howto">
+          <li><span>01</span> 点击 03 号柜的锁扣</li>
+          <li><span>02</span> 拉开我的柜门</li>
+          <li><span>03</span> 随便点开一个文件夹</li>
+        </ol>
+        <p class="side-copy__note">NO THREE.JS YET.<br>JUST HTML, CSS &amp; A LITTLE CHAOS.</p>
+      </aside>
+
+      <button class="close-tag" id="closeLocker" type="button" aria-label="关上柜门">
+        <span class="close-tag__string" aria-hidden="true"></span>
+        <span class="close-tag__label">
+          <span class="close-tag__icon" aria-hidden="true">×</span>
+          <span><strong>关上柜门</strong><small>CLOSE THE DOOR</small></span>
+        </span>
+      </button>
+
+      <aside class="mobile-card" id="mobileCard" aria-label="门内侧个人信息卡" aria-hidden="true"></aside>
+
+      <div class="hint-bar" id="hintBar">
+        <span class="hint-index">OPEN ME</span>
+        <p id="hintText" aria-live="polite">点击 03 号柜的锁扣，打开我的私人宇宙</p>
+        <span class="hint-arrow" aria-hidden="true">↙</span>
+      </div>
+
+      <div class="stage-tag stage-tag--left" aria-hidden="true">H·Q·T / PRIVATE LOCKER</div>
+      <div class="stage-tag stage-tag--right" aria-hidden="true">BEIJING · 39.9°N</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 韩沁彤 HAN QINTONG. ALL LITTLE THINGS RESERVED.</p>
+    <div class="footer-marquee" aria-hidden="true">
+      <span>OPEN THE LOCKER ✶ KEEP IT WEIRD ✶ ANIME &amp; INTERACTION ✶ OPEN THE LOCKER ✶ KEEP IT WEIRD ✶ ANIME &amp; INTERACTION ✶</span>
+    </div>
+    <p class="footer-right">DESIGNED &amp; BUILT WITH CURIOSITY <span aria-hidden="true">↗</span></p>
+  </footer>
+
+  <div class="modal-root" id="modalRoot" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <button class="modal-close" type="button" data-close-modal aria-label="关闭弹窗">
+        <span aria-hidden="true">×</span>
+        <small>CLOSE</small>
+      </button>
+      <div class="modal-content" id="modalContent"></div>
+    </section>
+  </div>
+
+  <div class="paint-burst" id="paintBurst" aria-hidden="true"></div>
+
+  <div class="device-tip" id="deviceTip" role="status" aria-live="polite"></div>
+</body>
+</html>
